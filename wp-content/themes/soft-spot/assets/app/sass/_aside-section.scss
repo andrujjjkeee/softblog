@@ -1,0 +1,75 @@
+.aside-section {
+  margin-bottom: 39px;
+  color: #4c4c4c;
+  @include open-sans;
+  font-weight: normal;
+
+  &__topic{
+    margin-bottom: 7px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 21px;
+    letter-spacing: -1px;
+  }
+
+  &__item{
+    display: block;
+    padding: 7px 0;
+    border-bottom: 2px solid #fff;
+    color: #4c4c4c;
+    font-size: 16px;
+    line-height: 24px;
+    transition: color .3s ease;
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &.is-active{
+      color: #56adc9;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .aside-section {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .aside-section {
+
+    &__topic{
+      margin-bottom: 5px;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    &__item {
+      padding: 6px 20px 6px 0;
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .aside-section {
+
+  }
+}
+@media (min-width: $desktop) {
+  .aside-section {
+
+    &__item{
+
+      &:hover{
+        color: #ff6461;
+      }
+
+    }
+
+  }
+}
+

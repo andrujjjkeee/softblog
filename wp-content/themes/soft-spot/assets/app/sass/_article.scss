@@ -1,0 +1,176 @@
+#article {
+  position: relative;
+  padding: 0 25px;
+  color: #4c4c4c;
+  @include open-sans;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+
+  > *:last-child{
+    margin-bottom: 0;
+  }
+
+  > p{
+    margin-bottom: 20px;
+  }
+
+  a{
+    color: #ff6461;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3{
+    color: #000;
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  ul{
+    margin-bottom: 34px;
+
+    li{
+      position: relative;
+      padding-left: 24px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #FF7227;
+      }
+
+    }
+
+  }
+
+  time{
+    color: rgba(0,0,0,.7);
+    font-size: 14px;
+  }
+
+  strong{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+  }
+
+  blockquote{
+    position: relative;
+    width: 82%;
+    margin: 0 auto 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-indent: 12px;
+
+    &:before, >p:last-child:after,
+    > ul:last-child li:last-child:after{
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: #1A9F29;
+      text-indent: 0;
+    }
+
+    &:before{
+      content: '«';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    > p{
+      text-indent: 0;
+
+      &:first-child{
+        text-indent: inherit;
+      }
+
+      &:last-child{
+        display: inline-block;
+
+        &:after{
+          content: '»';
+          margin-left: 5px;
+        }
+
+      }
+
+    }
+
+    > ul:last-child li:last-child{
+      display: inline-block;
+
+      &:after{
+        content: '»';
+        margin-left: 5px;
+      }
+
+    }
+
+    ul{
+      margin-top: 21px;
+    }
+
+    li{
+      margin-bottom: 15px;
+      padding-right: 25px;
+      text-indent: 0;
+    }
+
+  }
+
+  img, iframe{
+    display: block;
+    width: calc( 100% + 50px );
+    height: auto;
+    margin: 41px -25px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #article {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #article {
+    padding: 0 43px 45px;
+    font-size: 17px;
+    line-height: 25px;
+
+    > p{
+      margin-bottom: 25px;
+    }
+
+    h1, h2, h3{
+      margin: 13px 0 42px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #article {
+
+  }
+}
+@media (min-width: $desktop) {
+  #article {
+
+    a{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #ff8482;
+      }
+
+    }
+
+  }
+}

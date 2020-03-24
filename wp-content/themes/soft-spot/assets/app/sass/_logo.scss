@@ -1,0 +1,36 @@
+#logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 128px;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #logo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #logo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #logo {
+    width: 209px;
+
+  }
+}
+@media (min-width: $desktop) {
+  #logo {
+
+  }
+}
+

@@ -1,0 +1,122 @@
+#schedule-promo {
+  padding-top: 35px;
+  padding-bottom: 153px;
+  background-color: #fff;
+
+  &__content{
+    margin-bottom: 29px;
+
+  }
+
+  &__text{
+    width: 242px;
+    margin: 0 auto;
+    color: #ff6566;
+    font-size: 18px;
+    line-height: 24px;
+
+    h2, h3, h4{
+      margin-bottom: 13px;
+      color: #4c4c4c;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p{
+      width: 90%;
+      letter-spacing: .5px;
+    }
+
+  }
+
+  &__picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    margin: 0 auto;
+
+    img{
+      display: block;
+      width: 100%;
+      max-width: 561px;
+    }
+
+  }
+
+}
+.schedule-promo {
+
+}
+@media (min-width: $phone-landscape) {
+  #schedule-promo {
+
+  }
+  .schedule-promo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #schedule-promo {
+    padding-bottom: 211px;
+
+    &__text{
+      width: 410px;
+      margin-bottom: 16px;
+      line-height: 30px;
+      letter-spacing: .5px;
+
+      h2, h3, h4{
+        margin-bottom: 31px;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 1px;
+      }
+
+    }
+
+    &__picture{
+      width: 500px;
+    }
+
+  }
+  .schedule-promo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #schedule-promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 64px;
+
+    &__content{
+      width: 48%;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    &__picture{
+      position: relative;
+      left: -40px;
+      width: 55%;
+      margin: 0;
+      order: 1;
+    }
+
+
+  }
+  .schedule-promo {
+
+  }
+}
+@media (min-width: $desktop) {
+  #schedule-promo {
+    padding: 64px calc(50% - 538px) 211px;
+
+  }
+  .schedule-promo {
+
+  }
+}

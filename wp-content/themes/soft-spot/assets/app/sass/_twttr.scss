@@ -1,0 +1,52 @@
+.twttr {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 7px;
+  border-radius: 3px;
+  background-color: #56adc9;
+  color: #fff;
+  font-size: 9px;
+
+  svg{
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+    fill: #fff;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .twttr {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .twttr {
+    padding: 5px 6px;
+    font-size: 11px;
+
+    svg{
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .twttr {
+
+  }
+}
+@media (min-width: $desktop) {
+  .twttr {
+    transition: background-color .3s ease;
+
+    &:hover{
+      background-color: #60c2e1;
+    }
+
+  }
+}
+

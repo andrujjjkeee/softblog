@@ -1,0 +1,138 @@
+#toggle {
+  width: 290px;
+  height: 42px;
+  margin: 0 auto;
+  padding: 4px;
+  border-radius: 25px;
+  background-color: #eaf5f9;
+  user-select: none;
+  cursor: pointer;
+
+  &__wrap {
+    position: relative;
+    border-radius: inherit;
+    text-align: center;
+    height: 100%;
+  }
+
+  &__switch {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    > span {
+      display: block;
+      width: 50%;
+      color: #4c4c4c;
+    }
+
+  }
+
+  &__active {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #ff6567;
+    box-shadow: 0 4px 5px rgba(255,93,93,.34);
+    overflow: hidden;
+
+    &-switch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      > span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+      }
+
+    }
+
+    &.is-on-left {
+      left: 0;
+      right: 50%;
+      animation: rtl-toggle .35s ease-in-out;
+
+      #toggle__left {
+        animation: rtl-text-1 .35s ease-in-out;
+      }
+
+      #toggle__right {
+        right: 100%;
+        animation: rtl-text-2 .35s ease-in-out;
+      }
+
+    }
+
+    &.is-on-right {
+      left: 50%;
+      right: 0;
+      animation: ltr-toggle .35s ease-in-out;
+
+      #toggle__left {
+        right: 100%;
+        animation: ltr-text-1 .35s ease-in-out;
+      }
+
+      #toggle__right {
+        animation: ltr-text-2 .35s ease-in-out;
+      }
+
+    }
+
+  }
+
+  &__switch > span,
+  &__active-switch > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #toggle {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #toggle {
+    width: 307px;
+    height: 46px;
+
+    &__switch > span,
+    &__active-switch > span{
+      font-size: 15px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #toggle {
+    margin: 0;
+
+  }
+}
+@media (min-width: $desktop) {
+  #toggle {
+
+    &__switch > span{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #ff6461;
+      }
+
+    }
+
+  }
+}

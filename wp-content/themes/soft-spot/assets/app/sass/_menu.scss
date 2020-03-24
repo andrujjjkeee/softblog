@@ -1,0 +1,133 @@
+#menu {
+  margin-top: 32px;
+  font-size: 21px;
+  text-transform: uppercase;
+  text-align: center;
+
+  li{
+    margin-bottom: 30px;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+
+    &.is-active{
+      display: none;
+    }
+
+  }
+
+  a{
+    color: #4c4c4c;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #menu {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #menu {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #menu {
+    margin-top: 0;
+    margin-left: 28px;
+    font-size: 15px;
+
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li{
+      margin-bottom: 0;
+      margin-right: 33px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &.is-active{
+        display: block;
+        position: relative;
+
+        &:first-child{
+          display: none;
+        }
+
+        a{
+          color: #ff6461;
+        }
+
+      }
+
+      &.is-loading{
+
+        .menu__cat{
+          bottom: calc( 100% + 20px );
+        }
+
+      }
+
+    }
+
+  }
+  .menu{
+
+    &__cat{
+      position: absolute;
+      bottom: calc( 100% + 10px );
+      left: 50%;
+      transform: translateX(-50%);
+      transition: bottom .3s ease .5s;
+      pointer-events: none;
+
+      svg{
+        width: 56px;
+        height: 46px;
+        fill: #ff6461;
+      }
+
+    }
+
+    &__cat-eye-left,
+    &__cat-eye-right{
+      position: absolute;
+      top: 18px;
+      width: 12px;
+      height: 11px;
+      background: url('../img/cat-eye.png') no-repeat;
+      background-size: contain;
+      animation: double-wink 6s infinite linear 3s;
+    }
+
+    &__cat-eye-left{
+      left: 12px;
+    }
+
+    &__cat-eye-right{
+      left: 32px;
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  #menu {
+
+    a{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #ff6461;
+      }
+
+    }
+
+  }
+}
+

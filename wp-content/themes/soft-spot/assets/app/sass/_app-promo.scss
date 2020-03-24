@@ -1,0 +1,159 @@
+#app-promo {
+  padding-top: 38px;
+  padding-bottom: 34px;
+  background-color: #fff;
+
+  &__picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 288px;
+    margin: 0 auto;
+
+    img{
+      display: block;
+      width: 100%;
+      max-width: 461px;
+    }
+
+  }
+
+  &__content{
+    margin-bottom: 14px;
+  }
+
+  &__text{
+    width: 242px;
+    margin: 0 auto;
+    color: #4c4c4c;
+    font-size: 18px;
+    line-height: 24px;
+
+    h2, h3, h4{
+      margin-bottom: 17px;
+      color: #ff6461;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p{
+      margin-bottom: 23px;
+    }
+
+  }
+
+  &__link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    svg{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__apple{
+    width: 107px;
+    margin-right: 14px;
+  }
+
+  &__play{
+    width: 123px;
+  }
+
+}
+.app-promo {
+
+}
+@media (min-width: $phone-landscape) {
+  #app-promo {
+
+  }
+  .app-promo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #app-promo {
+
+    &__text{
+      width: 398px;
+      line-height: 30px;
+      letter-spacing: .5px;
+
+      h2, h3, h4{
+        margin-bottom: 20px;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: 1px;
+      }
+
+    }
+
+    &__apple{
+      width: 139px;
+      margin-right: 19px;
+    }
+
+    &__play {
+      width: 157px;
+    }
+
+    &__picture{
+      width: 497px;
+    }
+
+  }
+  .app-promo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #app-promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 134px;
+    padding-bottom: 84px;
+
+    &__picture{
+      display: flex;
+      justify-content: center;
+      width: 46%;
+    }
+
+    &__content{
+      width: 48%;
+      margin-bottom: 29px;
+    }
+
+  }
+  .app-promo {
+
+  }
+}
+@media (min-width: $desktop) {
+  #app-promo {
+    padding: 134px calc(50% - 538px) 84px;
+
+    &__link{
+     
+      a{
+        transition: transform .3s ease;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+
+      }
+
+    }
+
+  }
+  .app-promo {
+
+  }
+}
+

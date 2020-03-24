@@ -1,0 +1,100 @@
+#page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 22px;
+  padding-top: 76px;
+
+  &__title{
+    font-size: 24px;
+    color: #4c4c4c;
+    text-transform: uppercase;
+  }
+
+  &__back{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ff6461;
+
+    svg{
+      width: 23px;
+      height: 16px;
+      margin-right: 14px;
+      transform: rotate(180deg);
+
+      polyline{
+        fill:none;
+        stroke:#ff6461;
+        stroke-width:6px;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+      line{
+        stroke:#ff6461;
+        stroke-width:5px;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #page-head {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #page-head {
+    width: 100%;
+    margin-bottom: 39px;
+    padding-top: 128px;
+
+    &__title{
+      font-size: 33px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #page-head {
+
+  }
+}
+@media (min-width: $desktop) {
+  #page-head {
+
+    &__back{
+      transition: color .3s ease;
+
+      svg{
+
+        polyline, line{
+          transition: stroke .3s ease;
+        }
+
+      }
+
+      &:hover{
+        color: #ff8482;
+
+        svg{
+
+          polyline, line{
+            stroke:#ff8482;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+

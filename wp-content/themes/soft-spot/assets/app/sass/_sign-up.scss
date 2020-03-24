@@ -1,0 +1,129 @@
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 29px;
+  padding-bottom: 23px;
+
+  &__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 153px;
+    margin-bottom: 28px;
+    padding-bottom: 9px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 11px 10px rgba(89,173,201,.14);
+
+    img{
+      display: block;
+      width: 77px;
+      height: 68px;
+    }
+
+  }
+
+  .btn{
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 13px;
+    font-size: 18px;
+  }
+
+}
+.sign-up {
+
+}
+@media (min-width: $phone-landscape) {
+  #sign-up {
+
+  }
+  .sign-up {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #sign-up {
+    padding-top: 72px;
+    padding-bottom: 66px;
+
+    &__logo{
+      width: 220px;
+      height: 220px;
+    }
+
+  }
+  .sign-up {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #sign-up {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__logo{
+      margin: 0 62px;
+      order: 2;
+
+      img{
+        width: 110px;
+        height: 96px;
+      }
+
+      & + .btn {
+        order: 1;
+        transform-origin: 100% 50%;
+      }
+
+    }
+
+    .btn{
+      position: relative;
+      transition: top 1s ease, left 1s ease, transform 1s ease, background-color .3s ease;
+
+      &:last-of-type{
+        order: 3;
+        transform-origin: 0 50%;
+      }
+
+    }
+
+    &.is-hide{
+
+      #sign-up__logo{
+
+        & + .btn {
+          transform: scale(0) rotate(20deg);
+          bottom: 50px;
+          right: 50px;
+        }
+
+      }
+
+      .btn:last-of-type{
+        transform: scale(0) rotate(20deg);
+        top: 50px;
+        left: -50px;
+      }
+
+    }
+
+  }
+  .sign-up {
+
+  }
+}
+@media (min-width: $desktop) {
+  #sign-up {
+
+  }
+  .sign-up {
+
+  }
+}
+

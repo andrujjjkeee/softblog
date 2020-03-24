@@ -1,0 +1,31 @@
+#fb-widget {
+  width: 260px;
+  margin: 0 auto 24px;
+
+  iframe{
+    display: block;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #fb-widget {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #fb-widget {
+    margin-bottom: 21px;
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #fb-widget {
+
+  }
+}
+@media (min-width: $desktop) {
+  #fb-widget {
+
+  }
+}
+

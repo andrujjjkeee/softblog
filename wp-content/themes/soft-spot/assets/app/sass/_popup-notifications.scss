@@ -1,0 +1,33 @@
+.popup__notifications {
+  width: 90%;
+  max-width: 526px;
+  height: 622px;
+  padding: 56px 20px 0;
+  box-shadow: 0 7px 35px 0 rgba(86,173,201,0.15);
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+@media (min-width: $phone-landscape) {
+  .popup__notifications {
+    padding: 56px 80px 0;
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .popup__notifications {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .popup__notifications {
+
+  }
+}
+@media (min-width: $desktop) {
+  .popup__notifications {
+
+  }
+}

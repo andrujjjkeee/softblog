@@ -1,0 +1,175 @@
+$background-back: rgba(0,0,0,.7);
+
+#popup {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 10000;
+  background-color: $background-back;
+  opacity: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity .3s ease, visibility .3s ease;
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 50px 20px 35px;
+    z-index: 2;
+  }
+
+  &.is-loading{
+
+  }
+
+  &.is-opened {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  &.is-hide {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+}
+.popup {
+
+  &__content {
+    display: none;
+    position: relative;
+
+    .loader{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background-color: rgba(255,255,255,.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease, visibility .3s ease;
+      z-index: 2;
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 14px;
+    height: 14px;
+    text-indent: -5000px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity .3s ease;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #333;
+      transform-origin: center;
+      content: '';
+    }
+
+    &:after{
+      transform: translateY( 50% ) rotate( 45deg );
+    }
+
+    &:before {
+      transform: translateY( 50% ) rotate( -45deg );
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-position: 0 bottom;
+    }
+
+    &.hide{
+      opacity: 0;
+    }
+
+  }
+
+  &__scrollbar-measure {
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #popup {
+
+  }
+  .popup {
+
+    &__content {
+
+    }
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #popup {
+
+  }
+  .popup {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #popup {
+
+  }
+  .popup {
+
+  }
+}
+@media (min-width: $desktop) {
+  #popup {
+
+
+  }
+  .popup {
+
+    &__close {
+
+      &:after,
+      &:before {
+        transition: background-color .3s ease, opacity .3s ease;
+      }
+
+      &:hover{
+
+        &:after,
+        &:before {
+          background-color: #ff8482;
+        }
+
+      }
+
+    }
+
+  }
+}

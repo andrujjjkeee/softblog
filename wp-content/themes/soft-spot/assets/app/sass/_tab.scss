@@ -1,0 +1,103 @@
+.tabs {
+  position: relative;
+  z-index: 1;
+
+  &__item-wrap{
+    width: calc( 100% + 30px );
+    margin: 0 -15px 22px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  &__item{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    padding: 0 22px 9px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s ease;
+
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 22px;
+      width: calc( 100% - 44px );
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color .3s ease;
+    }
+
+    &.is-active{
+      color: #ff6461;
+
+      &:before{
+        border-bottom-color: #ff6461;
+      }
+
+    }
+
+  }
+
+  &__wrap {
+    transition: height .3s ease;
+    position: relative;
+  }
+
+  &__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &.is-show{
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .tabs {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .tabs {
+
+    &__item-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 21px;
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .tabs {
+    max-width: 1140px;
+    margin: 0 auto;
+
+  }
+}
+@media (min-width: $desktop) {
+  .tabs {
+
+    &__item{
+      cursor: default;
+      transition: color .3s ease;
+
+      &:hover{
+        color: #ff6461;
+      }
+
+    }
+
+  }
+}

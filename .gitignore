@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+dist/wp-config.php
+cgi-bin/
+blog/
+blog-wp/
+wp-config.php
+wp-content/themes/assets/node_modules/
+wp-content/uploads/
+.ftpquota

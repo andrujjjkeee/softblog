@@ -1,0 +1,166 @@
+#post-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 62px;
+
+  a{
+    width: 45%;
+    color: #4c4c4c;
+    @include open-sans;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+
+    svg{
+      width: 23px;
+      height: 16px;
+
+      polyline{
+        fill:none;
+        stroke:#ff6461;
+        stroke-width:6px;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+      line{
+        stroke:#ff6461;
+        stroke-width:5px;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+      }
+
+    }
+
+    &:nth-child(1){
+
+      svg{
+        transform: rotate(180deg);
+      }
+
+    }
+    &:nth-child(2){
+      text-align: right;
+    }
+
+    > span{
+      display: block;
+      margin-bottom: 9px;
+      color: #ff6461;
+      @include quicksand;
+      font-weight: bold;
+
+        span{
+        display: none;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  #post-navigation {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #post-navigation {
+    margin-bottom: 0;
+
+    a{
+      display: flex;
+      flex-direction: column;
+      font-size: 17px;
+      line-height: 25px;
+
+      &:nth-child(1){
+        align-items: flex-end;
+        text-align: right;
+
+        svg {
+          margin-right: 14px;
+        }
+
+        span{
+          justify-content: flex-start;
+        }
+
+      }
+      &:nth-child(2){
+        align-items: self-start;
+        text-align: left;
+
+        svg{
+          margin-left: 14px;
+        }
+
+        > span{
+          justify-content: flex-end;
+        }
+
+      }
+
+      > span{
+        display: flex;
+        align-items: center;
+        margin-bottom: 31px;
+        font-size: 19px;
+
+        &:nth-child(1){
+
+          span{
+            display: block;
+          }
+
+        }
+
+      }
+
+      p{
+        width: 70%;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #post-navigation {
+
+  }
+}
+@media (min-width: $desktop) {
+  #post-navigation {
+
+    a{
+      transition: color .3s ease;
+
+      svg{
+
+        polyline, line{
+          transition: stroke .3s ease;
+        }
+
+      }
+
+      &:hover{
+        color: #ff8482;
+
+        svg{
+
+          polyline, line{
+            stroke:#ff8482;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,148 @@
+#site{
+  background-color: #e6f4f7;
+
+}
+
+#site-header {
+
+  &.is-loading{
+    opacity: 0;
+  }
+
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  min-height: 501px;
+  padding-top: 70px;
+
+  &__lodgers{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    font-size: 83px;
+    padding-left: 15px;
+    z-index: 1;
+
+    li {
+      position: relative;
+
+      svg{
+        display: block;
+      }
+    }
+
+    &-cat{
+      width: .69em;
+      height: .56em;
+
+      .cat-eye-left,
+      .cat-eye-right {
+        position: absolute;
+        top: 0.27em;
+        width: 0.06em;
+        height: 0.06em;
+        border-radius: 50%;
+        background-color: #000;
+        animation: wink 6s infinite linear;
+      }
+
+      .cat-eye-left {
+        left: .17em;
+      }
+
+      .cat-eye-right {
+        left: .46em;
+      }
+
+    }
+    &-man{
+      width: .93em;
+      height: 1.16em;
+
+      .vet-eye-left,
+      .vet-eye-right{
+        position: absolute;
+        top: .43em;
+        width: .06em;
+        height: .075em;
+        border-radius: 44%/50%;
+        background-color: #000;
+        animation: double-wink 6s infinite linear 3s;
+      }
+
+      .vet-eye-left{
+        left: .28em;
+      }
+
+      .vet-eye-right{
+        left: .59em;
+      }
+
+    }
+    &-dog{
+      width: .99em;
+      height: .65em;
+
+      .dog-eye-left,
+      .dog-eye-right{
+        position: absolute;
+        top: .19em;
+        width: .11em;
+        height: .11em;
+        border-radius: 50%;
+        animation: wink 6s infinite linear 3s;
+      }
+
+      .dog-eye-left{
+        left: .31em;
+      }
+
+      .dog-eye-right{
+        left: .58em;
+      }
+
+    }
+
+  }
+
+  &.is-loading{
+
+    &:after,
+    &:before{
+      opacity: 0;
+    }
+
+    #hero__title{
+      opacity: 0;
+    }
+
+    #hero__gallery{
+
+      li{
+        opacity: 0;
+        transform: scale(0);
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: 768px) {
+  #hero {
+    min-height: 884px;
+
+    &__lodgers{
+      font-size: 113px;
+    }
+
+  }
+}

@@ -1,0 +1,240 @@
+#download-app {
+  position: relative;
+  padding-top: 106px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  overflow: hidden;
+
+  &__picture{
+    position: absolute;
+    right: calc( 50% + 15px);
+    bottom: 0;
+    width: 300px;
+
+    &-wrap{
+
+      > svg {
+        position: absolute;
+        top: calc( 50% - 50px );
+        left: calc( 50% - 175px );
+        width: calc(100% + 50px);
+        pointer-events: none;
+        animation: rotate 60s infinite linear;
+
+        path {
+          fill: #82c1d3;
+        }
+
+      }
+
+      img{
+        position: relative;
+        display: block;
+        width: 100%;
+        z-index: 1;
+      }
+
+    }
+
+  }
+
+  &__content{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: calc( 50% - 15px );
+    color: #ff6461;
+    font-size: 24px;
+    z-index: 1;
+  }
+
+  &__link{
+    padding-top: 19px;
+
+    a{
+      display: block;
+    }
+
+    svg{
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+  &__apple{
+    width: 128px;
+    margin-bottom: 13px;
+  }
+
+  &__play{
+    width: 146px;
+  }
+
+  &__dog{
+    position: absolute;
+    bottom: 218px;
+    left: 15px;
+    padding-right: 48px;
+    overflow: hidden;
+    transition: height 1s ease;
+    z-index: 1;
+
+    svg{
+      display: block;
+      margin: 0 auto;
+      width: 39px;
+      height: 35px;
+
+      path{
+
+        &.download-app__dog-0{
+          fill:none;
+        }
+        &.download-app__dog-1{
+          fill:#ff6566;
+        }
+
+      }
+
+    }
+
+    > span{
+      position: absolute;
+      top: calc( 50% - 10px);
+      left: 50%;
+      color: #ff6461;
+      letter-spacing: .7px;
+      transform: rotate(-15deg);
+
+      > span{
+        display: block;
+        opacity: 0;
+        animation-name: letter;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:nth-child(1){ margin-left: 6px; animation-name: letter-1; font-size: 12px;}
+        &:nth-child(2){animation-name: letter-2; animation-delay: .3s; font-size: 9px;}
+
+      }
+
+    }
+
+    &.is-hide{
+      height: 0;
+
+      > span{
+        animation: none;
+      }
+
+    }
+
+  }
+
+}
+.download-app {
+
+}
+@media (min-width: $phone-landscape) {
+  #download-app {
+
+  }
+  .download-app {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #download-app {
+    padding: 162px 15px 142px;
+
+    &__content{
+      margin-bottom: 0;
+      padding-left: calc( 50% + 52px);
+      font-size: 32px;
+    }
+
+    &__link{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 29px;
+    }
+
+    &__apple{
+      width: 178px;
+      margin: 0 20px 0 0;
+    }
+
+    &__play{
+      width: 201px;
+    }
+
+    &__picture{
+      right: calc( 50% + 7px);
+      width: 445px;
+
+      &-wrap{
+
+        > svg{
+          top: calc( 50% - 70px );
+          left: calc( 50% - 280px );
+          width: calc(100% + 104px);
+        }
+
+      }
+
+    }
+
+    &__dog{
+      bottom: 307px;
+      width: 170px;
+      height: 52px;
+      padding-right: 34px;
+
+      svg {
+        width: 58px;
+        height: 52px;
+      }
+
+      > span{
+        left: calc( 50% + 11px);
+      }
+
+    }
+
+  }
+  .download-app {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #download-app {
+
+  }
+  .download-app {
+
+  }
+}
+@media (min-width: $desktop) {
+  #download-app {
+
+    &__link{
+
+      a{
+        transition: transform .3s ease;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+
+      }
+
+    }
+
+  }
+  .download-app {
+
+  }
+}
+

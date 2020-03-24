@@ -1,0 +1,30 @@
+.fb-comments {
+  display: block;
+  width: 100%;
+
+  iframe{
+    width: 100%;
+  }
+
+}
+@media (min-width: $phone-landscape) {
+  .fb-comments {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .fb-comments {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .fb-comments {
+    width: 209px;
+
+  }
+}
+@media (min-width: $desktop) {
+  .fb-comments {
+
+  }
+}

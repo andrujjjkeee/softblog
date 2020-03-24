@@ -1,0 +1,51 @@
+#footer-menu {
+  display: none;
+
+}
+@media (min-width: $phone-landscape) {
+  #footer-menu {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #footer-menu {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #footer-menu {
+    display: block;
+
+    a{
+      position: relative;
+      margin-left: 50px;
+      color: #b9b9b9;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: -25px;
+        height: 15px;
+        border-left: 1px solid #b9b9b9;
+      }
+
+    }
+
+  }
+}
+@media (min-width: $desktop) {
+  #footer-menu {
+
+    a{
+      transition: color .3s ease;
+
+      &:hover{
+        color: #60c2e1;
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,168 @@
+#site{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-width: 320px;
+  min-height: 100%;
+  background: url('../img/pattern-background.svg') top left #e6f4f7;
+  background-size: 370px 370px;
+  @include quicksand;
+  overflow: hidden;
+
+  & > * {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  &__wrap{
+    position: relative;
+    min-height: calc( 100vh - 75px );
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:after,
+    &:before{
+      content: '';
+      position: absolute;
+      background-color: #e6f4f7;
+      pointer-events: none;
+      transform: translateZ(0);
+      transition: opacity 1s ease 1s;
+    }
+
+    &:before{
+      top: 153px;
+      left: 50%;
+      width: 130%;
+      height: 110px;
+      border-radius: 50% 50% 0 0;
+      transform: translateX(-50%);
+    }
+
+    &:after{
+      top: 263px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+
+  &__content{
+    margin-bottom: 23px;
+
+  }
+
+  &__aside{
+    margin-bottom: 55px;
+
+    & > *:last-child{
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__footer{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #b9b9b9;
+    font-size: 15px;
+    background: url('../img/footer-background.svg') top left #4c4c4c;
+    background-size: 370px 370px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+}
+.site{
+
+}
+@media (min-width: $phone-landscape) {
+  #site{
+
+  }
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  #site{
+
+    &__wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &:before {
+        top: 288px;
+      }
+
+      &:after {
+        top: 838px;
+      }
+
+    }
+
+    &__content{
+      width: calc( 100% - 280px );
+      margin-bottom: 90px;
+    }
+
+    &__aside{
+      max-width: 262px;
+    }
+
+  }
+  .site {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  #site{
+
+    &__wrap{
+      padding-right: calc( 50% - 473px);
+      padding-left: calc( 50% - 502px);
+
+      &:before{
+        left: 50%;
+        width: 130%;
+        height: 550px;
+        border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+        transform: translateX(-50%);
+      }
+
+    }
+
+    &__content {
+      width: calc(100% - 321px);
+    }
+
+    &__footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  .site {
+
+  }
+}
+@media (min-width: $desktop) {
+  #site{
+
+  }
+  .site {
+
+  }
+}
+
